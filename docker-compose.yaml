@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  mongodb:
+    image: 'bitnami/mongodb:6.0.3'
+    networks:
+      - backend
+
+  web_app:
+    build: .
+    ports: ["8080:8080"]
+
+
+networks:
+  backend:
+    driver: bridge
