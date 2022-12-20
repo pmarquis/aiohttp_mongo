@@ -5,10 +5,14 @@ services:
     image: 'bitnami/mongodb:6.0.3'
     networks:
       - backend
+    ports:
+      - "27017:27017"
 
   web_app:
     build: .
     ports: ["8080:8080"]
+    networks:
+      - backend
 
 
 networks:
