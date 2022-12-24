@@ -3,7 +3,7 @@ from aiohttp import web
 import asyncio
 import motor.motor_asyncio
 
-client = motor.motor_asyncio.AsyncIOMotorClient()
+client = motor.motor_asyncio.AsyncIOMotorClient('mongodb', 27017)
 db = client["app_database"]
 
 async def handle(request):

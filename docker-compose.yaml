@@ -2,6 +2,7 @@ version: '2'
 
 services:
   mongodb:
+    container_name: mongodb
     image: 'bitnami/mongodb:6.0.3'
     networks:
       - backend
@@ -10,9 +11,13 @@ services:
 
   web_app:
     build: .
-    ports: ["8080:8080"]
+    ports:
+      - "8080:8080"
     networks:
       - backend
+    depends_on:
+      - mongodb
+    container_name: web_app
 
 
 networks:
