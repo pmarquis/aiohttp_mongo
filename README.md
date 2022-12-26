@@ -5,10 +5,19 @@ This project is an aiohttp API using mongodb.
 
 ## Run server
 Run server without database (does not work when database is needed)
-> python server.py
+```console
+python server.py
+```
 
 ## Run docker containers
-> docker-compose build
-> docker-compose run
+```console
+docker-compose build
+docker-compose run
+```
 
+## Docker images
+The server image is available on Docker Hub:
+https://hub.docker.com/repository/docker/piermarquis/web_app
+
+The mongodb image is hosted on Bitnami registry.
 
