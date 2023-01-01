@@ -6,6 +6,8 @@ This project is an aiohttp API using mongodb.
 ## Run server
 Run server without database (does not work when database is needed)
 ```console
+python -m venv venv
+pip install -r requirements.txt
 python server.py
 ```
 
