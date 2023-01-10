@@ -18,7 +18,8 @@ async def add_person(request):
         raise web.HTTPBadRequest('No name given')
     res = await db["persons"].insert_one({'name': name})    
     print(res)
-    return web.Response(text="Added " + name)
+    return web.Response(text=f"Added person {name}")
+>>>>>>> 324ebc4 (Added /add_person endpoint)
 
 app = web.Application()
 app.add_routes([web.get('/', handle),
